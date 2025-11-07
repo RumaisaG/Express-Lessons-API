@@ -1,31 +1,44 @@
 const express = require('express');
 const loggerMiddleware = require('./middleware/logger');
-const imageMiddleware = require('./middleware/staticFiles');
+const { imageMiddleware, htmlMiddleware } = require('./middleware/staticFiles');
+const { connectToDatabase } = require('./config/database');
 const apiRouter = require('./routes/api');
-
-const cors = require("cors");
+const cors = require('cors');
 
 const app = express();
+const PORT = 3000;
 
-app.use(cors());
+async function startServer() {
+    try {
+        await connectToDatabase();
 
-const PORT =  3000;
+        app.use(cors());
+        app.use(express.json());
 
-// Logger Middleware
-app.use(loggerMiddleware);
+        // Logger Middleware
+        app.use(loggerMiddleware);
 
-//Static File Middleware
-app.use(imageMiddleware);
+        // Serve static frontend files
+        app.use(htmlMiddleware);
 
-// API Router 
-app.use('/api', apiRouter);
+        // Serve images
+        app.use(imageMiddleware);
 
-//Middleware for error handling
-app.use((req, res) => {
-    res.status(404).json({error: 'Resource not found'});
-});
+        // API routes
+        app.use('/api', apiRouter);
 
+        // 404 handler
+        app.use((req, res) => {
+            res.status(404).json({ error: 'Resource not found' });
+        });
 
-app.listen(PORT, () => {
-    console.log('Server is running on http://localhost:3000');
-});
+        app.listen(PORT, () => {
+            console.log(`✅ Server is running on http://localhost:${PORT}`);
+        });
+
+    } catch (error) {
+        console.error('❌ Failed to start server:', error);
+    }
+}
+
+startServer();

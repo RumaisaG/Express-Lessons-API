@@ -6,5 +6,12 @@ const imageMiddleware = express.static('images', {
     fallthrough: true 
 });
 
+const htmlMiddleware = express.static(
+    path.join(__dirname, '../../Lessons-Apps-Vue/public'),
+    { fallthrough: true }
+);
 
-module.exports = imageMiddleware;
+module.exports = {
+    imageMiddleware,
+    htmlMiddleware
+};
