@@ -29,15 +29,15 @@ async function startServer() {
 
         // 404 handler
         app.use((req, res) => {
-            res.status(404).json({ error: 'Resource not found' });
+            res.status(404).json({ error: 'resource not found' });
         });
 
         app.listen(PORT, () => {
-            console.log(`✅ Server is running on http://localhost:${PORT}`);
+            console.log(`server is running on http://localhost:${PORT}`);
         });
 
     } catch (error) {
-        console.error('❌ Failed to start server:', error);
+        console.error('failed to start server:', error);
     }
 }
 
