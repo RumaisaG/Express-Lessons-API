@@ -72,5 +72,35 @@ router.put('/lessons/:id', (req, res) => {
     });
 });
 
+router.post('/orders', (req, res) => {
+    const orderData = req.body;
+  
+    const db = getDb();
+    const ordersCollection = db.collection('Orders');
+    
+    const order = {
+        customerName: orderData.customerName,
+        phone: orderData.phone,
+        email: orderData.email,
+        lessons: orderData.lessons,
+        totalAmount: orderData.totalAmount,
+        orderDate: new Date(),
+    };
+
+    ordersCollection.insertOne(order)
+        .then(result => {
+            res.json({
+                success: true,
+                message: 'Order created successfully',
+                insertedId: result.insertedId
+            });
+        })
+        .catch(error => {
+            console.error('Create order error:', error);
+            res.status(500).json({ error: 'Internal server error' });
+        });
+});
+
+
 
 module.exports = router;
