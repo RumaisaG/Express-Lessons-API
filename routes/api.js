@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const { ObjectId } = require('mongodb');
 const { getDb } = require('../config/database');
 
 router.get('/lessons', async (req, res) => {
@@ -41,5 +42,35 @@ router.get('/search', async(req,res) => {
         res.status(500).json({ error: 'internal server error' });
     }
 }) 
+
+router.put('/lessons/:id', (req, res) => {
+    const { id } = req.params;
+    const updates = req.body;
+
+    const db = getDb();
+    
+    const collection = db.collection('Lessons');
+    
+    collection.updateOne(
+        { _id: new ObjectId(id) },
+        { $set: updates }
+    ).then(result => {
+        if (result.matchedCount === 0) {
+            return res.status(404).json({ error: 'Lesson not found' });
+        }
+
+        res.json({
+            success: true,
+            message: 'Lesson updated successfully',
+            updatedFields: Object.keys(updates),
+            result: result
+        });
+    })
+    .catch(error => {
+        console.error('Update lesson error:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    });
+});
+
 
 module.exports = router;
