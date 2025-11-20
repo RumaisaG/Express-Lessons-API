@@ -12,7 +12,16 @@ async function startServer() {
     try {
         await connectToDatabase();
 
-        app.use(cors());
+       app.use(cors({
+            origin: [
+                'https://github.com/RumaisaG/Lessons-Apps-Vue',  
+                'http://localhost:3000',         
+                'http://127.0.0.1:3000'            
+            ],
+          
+            methods: ['GET', 'POST', 'PUT'],
+            allowedHeaders: ['Content-Type', 'Authorization']
+        }));
         app.use(express.json());
 
         // Logger Middleware
@@ -27,13 +36,15 @@ async function startServer() {
         // API routes
         app.use('/api', apiRouter);
 
+       
+
         // 404 handler
         app.use((req, res) => {
             res.status(404).json({ error: 'resource not found' });
         });
 
         app.listen(PORT, () => {
-            console.log(`server is running on http://localhost:${PORT}`);
+            console.log(`server is running on ${PORT}`);
         });
 
     } catch (error) {
