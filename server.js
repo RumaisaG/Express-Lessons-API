@@ -14,7 +14,7 @@ async function startServer() {
 
        app.use(cors({
             origin: [
-                'https://github.com/RumaisaG/Lessons-Apps-Vue',  
+                'https://rumaisag.github.io/Lessons-Apps-Vue/',  
                 'http://localhost:3000',         
                 'http://127.0.0.1:3000'            
             ],
