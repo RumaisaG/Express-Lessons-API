@@ -27,18 +27,14 @@ async function startServer() {
 
         // Logger Middleware
         app.use(loggerMiddleware);
-        // Serve images
-        app.use(imageMiddleware);
-
+     
         // API routes
         app.use('/api', apiRouter);
 
         app.use('/images', imageMiddleware);
-       
-
-        // 404 handler
-        app.use('/api/*', (req, res) => {
-            res.status(404).json({ error: 'The API endpoint is not found' });
+         
+        app.use((req, res) => {
+            res.status(404).json({ error: 'the route not found' });
         });
 
         app.listen(PORT, () => {
