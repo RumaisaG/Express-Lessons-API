@@ -1,6 +1,6 @@
 const express = require('express');
 const loggerMiddleware = require('./middleware/logger');
-const { imageMiddleware, htmlMiddleware } = require('./middleware/staticFiles');
+const { imageMiddleware } = require('./middleware/staticFiles');
 const { connectToDatabase } = require('./config/database');
 const apiRouter = require('./routes/api');
 const cors = require('cors');
@@ -10,6 +10,7 @@ const PORT = 3000;
 
 async function startServer() {
     try {
+        
         await connectToDatabase();
 
        app.use(cors({
@@ -20,7 +21,7 @@ async function startServer() {
             ],
           
             methods: ['GET', 'POST', 'PUT'],
-            allowedHeaders: ['Content-Type', 'Authorization']
+
         }));
         app.use(express.json());
 
@@ -36,11 +37,12 @@ async function startServer() {
         // API routes
         app.use('/api', apiRouter);
 
+        app.use('/images', imageMiddleware);
        
 
         // 404 handler
-        app.use((req, res) => {
-            res.status(404).json({ error: 'resource not found' });
+        app.use('/api/*', (req, res) => {
+            res.status(404).json({ error: 'The API endpoint is not found' });
         });
 
         app.listen(PORT, () => {

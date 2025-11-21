@@ -3,40 +3,27 @@ const path = require('path');
 const fs = require('fs');
 
 const imageMiddleware = (req, res, next) => {
-    if (!req.path.match(/\.(jpg|jpeg|png|gif|webp)$/i)) {
-        return next();
-    }
+    console.log(`Image request received: ${req.path}`);
+    
+    const imagesDir = path.join(__dirname, '../images');
+    const imagePath = path.join(imagesDir, req.path);
 
-    try {
-        const imagesDir = path.join(process.cwd(), 'images');
-        const imagePath = path.join(imagesDir, req.path);
-        
-        if (!imagePath.startsWith(imagesDir)) {
-            return res.status(400).json({ error: 'Invalid image path' });
+    fs.access(imagePath, fs.constants.F_OK, (err) => {
+        if (err) {
+            console.log(`IMAGE NOT FOUND: ${req.path}`);
+            return res.status(404).json({
+                error: 'Image not found',
+                message: `The image '${req.path}' does not exist`,
+                timestamp: new Date().toISOString()
+            });
         }
-
-        fs.access(imagePath, fs.constants.F_OK, (err) => {
-            if (err) {
-                return res.status(404).json({
-                    success: false,
-                    error: 'Image not found',
-                    requestedPath: req.path
-                });
-            }
-            
-            express.static(imagesDir)(req, res, next);
-        });
-    } catch (error) {
-        res.status(500).json({ error: 'Server error processing image request' });
-    }
+        
+        console.log(`IMAGE SERVED: ${req.path}`);
+        express.static(imagesDir)(req, res, next);
+    });
 };
 
-const htmlMiddleware = express.static(
-    path.join(__dirname, '../../Lessons-Apps-Vue/public'),
-    { fallthrough: true }
-);
 
 module.exports = {
-    imageMiddleware,
-    htmlMiddleware
+    imageMiddleware
 };
