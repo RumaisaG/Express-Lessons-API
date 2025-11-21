@@ -10,7 +10,7 @@ const PORT = 3000;
 
 async function startServer() {
     try {
-        
+
         await connectToDatabase();
 
        app.use(cors({
@@ -27,10 +27,6 @@ async function startServer() {
 
         // Logger Middleware
         app.use(loggerMiddleware);
-
-        // Serve static frontend files
-        app.use(htmlMiddleware);
-
         // Serve images
         app.use(imageMiddleware);
 
