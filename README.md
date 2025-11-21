@@ -52,13 +52,15 @@ After checkout:
 - Express.js  
 - MongoDB (Atlas)  
 
-## 📂 Project Structure
+##  Project Structure
 - server.js
 - routes --> api.js
-- middleware --> logger.js
--            --> staticFiles.js
+- middleware
+   --> logger.js
+   --> staticFiles.js
 - images
-- config --> database.js       
+- config
+   --> database.js       
 
 ## Live Backend Deployement (Render.com)
 The backend API is deployed on Render and available at : https://express-lessons-api.onrender.com
