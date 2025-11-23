@@ -1,0 +1,242 @@
+[{
+  "_id": {
+    "$oid": "691ab5f8d99aa152efe14385"
+  },
+  "customerName": "Smith Jones",
+  "phone": "+1234567890",
+  "email": "smith@gmail.com",
+  "lessons": [
+    {
+      "lessonId": "6712fa56b90f9a22d8c20003",
+      "title": "Physics Lab",
+      "price": 96,
+      "quantity": 2
+    },
+    {
+      "lessonId": "690dfccda8c20245f552fde6",
+      "title": "Guitar Workshop",
+      "price": 130,
+      "quantity": 1
+    }
+  ],
+  "totalAmount": 361,
+  "orderDate": {
+    "$date": "2025-11-17T05:43:20.028Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691acd0066a425a72ce1517d"
+  },
+  "customerName": "gb",
+  "phone": "45646465",
+  "email": "fcrtftr@live.com",
+  "lessons": [
+    {
+      "lessonId": "6712fa56b90f9a22d8c20002",
+      "topic": "English Essay Workshop",
+      "location": "Curepipe",
+      "quantity": 1,
+      "price": 80
+    },
+    {
+      "lessonId": "690dfccda8c20245f552fde6",
+      "topic": "Guitar Workshop",
+      "location": "Quatre Bornes",
+      "quantity": 1,
+      "price": 130
+    }
+  ],
+  "totalAmount": 220.5,
+  "orderDate": {
+    "$date": "2025-11-17T07:21:36.216Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691ee52c627ebd9afbc0536c"
+  },
+  "customerName": "lola",
+  "phone": "12341234",
+  "email": "lola@email.com",
+  "lessons": [
+    {
+      "lessonId": "6712fa56b90f9a22d8c20003",
+      "topic": "Physics Lab",
+      "location": "Port-Louis",
+      "quantity": 1,
+      "price": 96
+    }
+  ],
+  "totalAmount": 100.8,
+  "orderDate": {
+    "$date": "2025-11-20T09:53:48.555Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692081af70a0f6273cdd3142"
+  },
+  "customerName": "rumaisa",
+  "phone": "12345678",
+  "email": "r@email.com",
+  "lessons": [
+    {
+      "lessonId": "690d9ac6a8c20245f552fdda",
+      "topic": "Art Exploration Class",
+      "location": "Port-Louis",
+      "quantity": 1,
+      "price": 86
+    }
+  ],
+  "totalAmount": 90.3,
+  "orderDate": {
+    "$date": "2025-11-21T15:13:51.092Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69209855437bf81d4432c8cd"
+  },
+  "customerName": "isabelle",
+  "phone": "54321123",
+  "email": "isabelle@gmail.com",
+  "lessons": [
+    {
+      "lessonId": "6712fa56b90f9a22d8c20002",
+      "topic": "English Essay Workshop",
+      "location": "Curepipe",
+      "quantity": 1,
+      "price": 80
+    }
+  ],
+  "totalAmount": 84,
+  "orderDate": {
+    "$date": "2025-11-21T16:50:29.440Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692099a5437bf81d4432c8ce"
+  },
+  "customerName": "paul",
+  "phone": "44433321",
+  "email": "paul@email.com",
+  "lessons": [
+    {
+      "lessonId": "690d9ac6a8c20245f552fdda",
+      "topic": "Art Exploration Class",
+      "location": "Port-Louis",
+      "quantity": 3,
+      "price": 86
+    }
+  ],
+  "totalAmount": 270.9,
+  "orderDate": {
+    "$date": "2025-11-21T16:56:05.774Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69209b7e437bf81d4432c8cf"
+  },
+  "customerName": "toto",
+  "phone": "11122233",
+  "email": "toto@email.com",
+  "lessons": [
+    {
+      "lessonId": "6712fa56b90f9a22d8c20003",
+      "topic": "Physics Lab",
+      "location": "Port-Louis",
+      "quantity": 1,
+      "price": 96
+    }
+  ],
+  "totalAmount": 100.8,
+  "orderDate": {
+    "$date": "2025-11-21T17:03:58.656Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69209c7b437bf81d4432c8d0"
+  },
+  "customerName": "peter",
+  "phone": "11223344",
+  "email": "peter@email.com",
+  "lessons": [
+    {
+      "lessonId": "690d9b66a8c20245f552fde1",
+      "topic": "Environmental Science",
+      "location": "Vacoas",
+      "quantity": 3,
+      "price": 95
+    }
+  ],
+  "totalAmount": 299.25,
+  "orderDate": {
+    "$date": "2025-11-21T17:08:11.354Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6922bdd85082215884b486dd"
+  },
+  "customerName": "smith",
+  "phone": "21098765",
+  "email": "smith@email.com",
+  "lessons": [
+    {
+      "lessonId": "690d9ac6a8c20245f552fdd8",
+      "topic": "Creative Writing",
+      "location": "Port-Louis",
+      "quantity": 1,
+      "price": 120
+    }
+  ],
+  "totalAmount": 126,
+  "orderDate": {
+    "$date": "2025-11-23T07:55:04.186Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6922f714f590c9c5262b66da"
+  },
+  "customerName": "Joshua",
+  "phone": "+1234566890",
+  "email": "Joshua@gmail.com",
+  "lessons": [
+    {
+      "lessonId": "6712fa56b90f9a22d8c20003",
+      "title": "Physics Lab",
+      "price": 96,
+      "quantity": 2
+    }
+  ],
+  "totalAmount": 201.6,
+  "orderDate": {
+    "$date": "2025-11-23T11:59:16.673Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692317d3d66b95040617041c"
+  },
+  "customerName": "rumaisa",
+  "phone": "12341234",
+  "email": "rumaisa@email.com",
+  "lessons": [
+    {
+      "lessonId": "690a197d52088d95efc6a379",
+      "topic": "Introduction to Maths",
+      "location": "Port-Louis",
+      "quantity": 2,
+      "price": 109
+    }
+  ],
+  "totalAmount": 228.9,
+  "orderDate": {
+    "$date": "2025-11-23T14:18:59.357Z"
+  }
+}]

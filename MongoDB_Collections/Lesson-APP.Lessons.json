@@ -1,0 +1,351 @@
+[{
+  "_id": {
+    "$oid": "690a197d52088d95efc6a379"
+  },
+  "topic": "Introduction to Maths",
+  "location": "Port-Louis",
+  "price": 109,
+  "spaces": 3,
+  "description": "Master key concepts and build true problem-solving skills. Our lessons make maths engaging and accessible, turning confusion into confidence one step at a time.",
+  "imageUrl": [
+    "intro_maths.jpg",
+    "children_enjoying.jpg",
+    "children.jpeg",
+    "library.jpeg"
+  ],
+  "rating": 4.8,
+  "category": "STEM",
+  "days": [
+    "Monday",
+    "Tuesday"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6712fa56b90f9a22d8c20002"
+  },
+  "topic": "English Essay Workshop",
+  "location": "Curepipe",
+  "price": 80,
+  "spaces": 1,
+  "description": "Learn to craft powerful and persuasive essays. We'll guide you through structuring your arguments, refining your style, and writing with clarity and impact.",
+  "imageUrl": [
+    "english_essay.jpg",
+    "children_enjoying.jpg",
+    "children.jpeg",
+    "library.jpeg"
+  ],
+  "rating": 4.6,
+  "category": "Languages",
+  "days": [
+    "Monday",
+    "Tuesday"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6712fa56b90f9a22d8c20003"
+  },
+  "topic": "Physics Lab",
+  "location": "Port-Louis",
+  "price": 96,
+  "spaces": 3,
+  "description": "Step into the lab and see principles come to life. Through exciting, hands-on experiments, you'll discover the real-world rules of motion, energy, and matter.",
+  "imageUrl": [
+    "physics.jpg",
+    "children_enjoying.jpg",
+    "children.jpeg",
+    "library.jpeg"
+  ],
+  "rating": 4.9,
+  "category": "STEM",
+  "days": [
+    "Thursday"
+  ]
+},
+{
+  "_id": {
+    "$oid": "690d9ac6a8c20245f552fdd9"
+  },
+  "topic": "Robotics for Beginners",
+  "location": "Curepipe",
+  "price": 210,
+  "spaces": 5,
+  "description": "Design, build, and program your first robot. Learn the fundamentals of engineering and coding in a fun, collaborative environment where creativity meets technology.",
+  "imageUrl": [
+    "robotics.jpeg",
+    "children_enjoying.jpg",
+    "children.jpeg",
+    "library.jpeg"
+  ],
+  "rating": 4.9,
+  "category": "STEM",
+  "days": [
+    "Monday"
+  ]
+},
+{
+  "_id": {
+    "$oid": "690d9ac6a8c20245f552fddb"
+  },
+  "topic": "Science Discovery Lab",
+  "location": "Quatre Bornes",
+  "price": 152,
+  "spaces": 5,
+  "description": "Put on your lab coat and explore the wonders of science. This interactive class mixes chemistry, biology, and physics with thrilling experiments and discoveries",
+  "imageUrl": [
+    "science_lab.jpeg",
+    "children_enjoying.jpg",
+    "children.jpeg",
+    "library.jpeg"
+  ],
+  "rating": 4.8,
+  "category": "STEM",
+  "days": [
+    "Monday"
+  ]
+},
+{
+  "_id": {
+    "$oid": "690d9ac6a8c20245f552fdd8"
+  },
+  "topic": "Creative Writing",
+  "location": "Port-Louis",
+  "price": 120,
+  "spaces": 7,
+  "description": "Unleash your imagination and find your unique voice. We'll explore character creation, vivid settings, and storytelling techniques to bring your ideas to life.",
+  "imageUrl": [
+    "creative_writing.jpeg",
+    "children_enjoying.jpg",
+    "children.jpeg",
+    "library.jpeg"
+  ],
+  "rating": 4.7,
+  "category": "Languages",
+  "days": [
+    "Monday"
+  ]
+},
+{
+  "_id": {
+    "$oid": "690d9ac6a8c20245f552fdda"
+  },
+  "topic": "Art Exploration Class",
+  "location": "Port-Louis",
+  "price": 86,
+  "spaces": 6,
+  "description": "Dive into a world of color and creativity. Experiment with various mediums like painting, charcoal, and collage to develop your skills and artistic expression.",
+  "imageUrl": [
+    "art.jpeg",
+    "children_enjoying.jpg",
+    "children.jpeg",
+    "library.jpeg"
+  ],
+  "rating": 4.6,
+  "category": "Art & Craft",
+  "days": [
+    "Monday"
+  ]
+},
+{
+  "_id": {
+    "$oid": "690d9ac6a8c20245f552fddc"
+  },
+  "topic": "French Language Club",
+  "location": "Rose-Hill",
+  "price": 98,
+  "spaces": 4,
+  "description": "Bonjour! Start your journey into the French language and culture. Learn practical conversation skills, vocabulary, and grammar in a lively, interactive setting.",
+  "imageUrl": [
+    "/french_club.png",
+    "/children_enjoying.jpg",
+    "/children.jpeg"
+  ],
+  "rating": 4.5,
+  "category": "Languages",
+  "days": [
+    "Sunday"
+  ]
+},
+{
+  "_id": {
+    "$oid": "690d9b66a8c20245f552fddf"
+  },
+  "topic": "Young Entrepreneurs",
+  "location": "Port-Louis",
+  "price": 160,
+  "spaces": 5,
+  "description": "Transform your big idea into a real venture. Learn the essentials of business planning, marketing, and finance to launch and manage your own mini-company.",
+  "imageUrl": [
+    "/entrepreneurship.jpeg",
+    "/children_enjoying.jpg",
+    "/children.jpeg"
+  ],
+  "rating": 4.7,
+  "category": "Languages",
+  "days": [
+    "Sunday",
+    "Saturday"
+  ]
+},
+{
+  "_id": {
+    "$oid": "690d9b66a8c20245f552fde1"
+  },
+  "topic": "Environmental Science",
+  "location": "Vacoas",
+  "price": 95,
+  "spaces": 9,
+  "description": "Become a guardian of our planet. Investigate ecosystems, climate change, and sustainability through hands-on projects that make a difference in your community.",
+  "imageUrl": [
+    "environment_club.jpg",
+    "children_enjoying.jpg",
+    "children.jpeg"
+  ],
+  "rating": 4.6,
+  "category": "STEM",
+  "days": [
+    "Sunday",
+    "Wednesday"
+  ]
+},
+{
+  "_id": {
+    "$oid": "690d9b66a8c20245f552fde0"
+  },
+  "topic": "Musical Theater",
+  "location": "Curepipe",
+  "price": 137,
+  "spaces": 5,
+  "description": "Lights, camera, action! Develop your triple-threat skills in singing, dancing, and acting. Build stage presence and confidence in a collaborative, performance-focused environment.",
+  "imageUrl": [
+    "musical_theater.jpeg",
+    "children_enjoying.jpg",
+    "children.jpeg"
+  ],
+  "rating": 4.8,
+  "category": "Art & Craft",
+  "days": [
+    "Sunday",
+    "Tuesday"
+  ]
+},
+{
+  "_id": {
+    "$oid": "690d9b66a8c20245f552fdde"
+  },
+  "topic": "Junior Coding Club",
+  "location": "Ebène",
+  "price": 180,
+  "spaces": 5,
+  "description": "Create your own animations, stories, and games. Using fun, intuitive platforms, you'll learn the foundational concepts of computer programming and logical thinking.",
+  "imageUrl": [
+    "coding_club.jpeg",
+    "children_enjoying.jpg",
+    "children.jpeg"
+  ],
+  "rating": 4.9,
+  "category": "STEM",
+  "days": [
+    "Sunday"
+  ]
+},
+{
+  "_id": {
+    "$oid": "690d9b66a8c20245f552fde2"
+  },
+  "topic": "Public Speaking",
+  "location": "Rose-Hill",
+  "price": 140,
+  "spaces": 8,
+  "description": "Find your voice and captivate any audience. Learn proven techniques to organize your thoughts, conquer nerves, and deliver speeches with poise and persuasion.",
+  "imageUrl": [
+    "public_speaking.png",
+    "children_enjoying.jpg",
+    "children.jpeg"
+  ],
+  "rating": 4.8,
+  "category": "Languages",
+  "days": [
+    "Saturday"
+  ]
+},
+{
+  "_id": {
+    "$oid": "690d9b66a8c20245f552fde3"
+  },
+  "topic": "Chess Masters Academy",
+  "location": "Quatre Bornes",
+  "price": 116,
+  "spaces": 5,
+  "description": "Elevate your game with advanced strategy. This academy focuses on tactical patterns, endgame theory, and mental discipline for players ready to master the board.",
+  "imageUrl": [
+    "chess_academy.png",
+    "children_enjoying.jpg",
+    "children.jpeg"
+  ],
+  "rating": 4.9,
+  "category": "Sports & Games",
+  "days": [
+    "Tuesday",
+    "Sunday",
+    "Wednesday"
+  ]
+},
+{
+  "_id": {
+    "$oid": "690dfccda8c20245f552fde6"
+  },
+  "topic": "Guitar Workshop",
+  "location": "Quatre Bornes",
+  "price": 130,
+  "spaces": 4,
+  "description": "Strum your favorite songs and understand the music behind them. This workshop covers fundamental chords, strumming patterns, and basic music theory for beginners.",
+  "imageUrl": [
+    "guitar.jpeg",
+    "children.jpeg"
+  ],
+  "rating": 4.7,
+  "category": "Music",
+  "days": [
+    "Monday"
+  ]
+},
+{
+  "_id": {
+    "$oid": "690dfccda8c20245f552fde5"
+  },
+  "topic": "Piano for Beginners",
+  "location": "Rose-Hill",
+  "price": 150,
+  "spaces": 5,
+  "description": "Start your musical journey with a strong foundation. Learn proper technique, note-reading, and rhythm while playing beautiful and fun songs from your very first lesson.",
+  "imageUrl": [
+    "piano.jpeg"
+  ],
+  "rating": 4.9,
+  "category": "Music",
+  "days": [
+    "Monday"
+  ]
+},
+{
+  "_id": {
+    "$oid": "690dfccda8c20245f552fde7"
+  },
+  "topic": "Badminton Training",
+  "location": "Curepipe",
+  "price": 90,
+  "spaces": 5,
+  "description": "Develop agility, power, and precision on the court. Our sessions focus on mastering serves, footwork, and smash techniques in a fast-paced, energetic environment.",
+  "imageUrl": [
+    "badminton.jpeg",
+    "children.jpeg"
+  ],
+  "rating": 4.6,
+  "category": "Sports & Games",
+  "days": [
+    "Monday",
+    "Wednesday"
+  ]
+}]

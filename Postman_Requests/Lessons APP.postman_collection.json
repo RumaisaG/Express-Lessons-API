@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "f9a7f184-225c-42ee-8996-185a921b086f",
+		"name": "Lessons APP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49666857",
+		"_collection_link": "https://rumaisag-7473255.postman.co/workspace/Rumaisa_G's-Workspace~9ef87efd-b265-4915-8b26-c64c1dd89d83/collection/49666857-f9a7f184-225c-42ee-8996-185a921b086f?action=share&source=collection_link&creator=49666857"
+	},
+	"item": [
+		{
+			"name": "Get all lessons",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Saves new order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerName\": \"Joshua\",\r\n    \"phone\": \"+1234566890\",\r\n    \"email\": \"Joshua@gmail.com\",\r\n    \"lessons\": [\r\n        {\r\n            \"lessonId\": \"6712fa56b90f9a22d8c20003\",\r\n            \"title\": \"Physics Lab\",\r\n            \"price\": 96,\r\n            \"quantity\": 2\r\n        }\r\n    ],\r\n    \"totalAmount\": 201.6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server_url}}api/orders",
+					"host": [
+						"{{server_url}}api"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update lessons",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"spaces\": 5,\r\n    \"price\": 109\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server_url}}api/lessons/690a197d52088d95efc6a379",
+					"host": [
+						"{{server_url}}api"
+					],
+					"path": [
+						"lessons",
+						"690a197d52088d95efc6a379"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by query",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server_url}}api/search?q=curepipe",
+					"host": [
+						"{{server_url}}api"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "curepipe"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gets an image",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{server_url}}images/english_essay.jpg",
+					"host": [
+						"{{server_url}}images"
+					],
+					"path": [
+						"english_essay.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gets an Image which does not exist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server_url}}images/essay.jpg",
+					"host": [
+						"{{server_url}}images"
+					],
+					"path": [
+						"essay.jpg"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
