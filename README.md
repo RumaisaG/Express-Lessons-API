@@ -4,6 +4,7 @@ RU Academy Backend is a Node.js/Express REST API that powers the after-school le
 
 ## Live Backend Deployement (Render.com)
 The backend API is deployed on Render and available at : https://express-lessons-api.onrender.com
+You can see the list of all lessons at https://express-lessons-api.onrender.com/api/lessons
 
 ## Features
 
