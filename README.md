@@ -1,32 +1,40 @@
-# Lessons Booking Platform — Backend (Node.js + Express + MongoDB)
+# RU Academy Backend — (Node.js + Express + MongoDB)
 
-This is the backend REST API for my lesson booking platform coursework.  
-It provides lesson data, handles orders, and updates available lesson spaces as required by the coursework.
+RU Academy Backend is a Node.js/Express REST API that powers the after-school lessons booking platform. It uses native MongoDB driver for efficient database operations and provides real-time search functionality.
+
+## Live Backend Deployement (Render.com)
+The backend API is deployed on Render and available at : https://express-lessons-api.onrender.com
 
 ## Features
 
 ###  Lessons API (CRUD)
-- Fetch all lessons (`GET /lessons`)
-- Update **any lesson attribute** (`PUT /lessons/:id`)
+- Fetch all lessons for display (`GET api/lessons`)
+- Update **any lesson attribute** (`PUT api/lessons/:id`)
   - This general-purpose update route.
   - Used after checkout to update the number of spaces.
+- Searches for lessons (`GET api/search?q=curepipe`)
+  
 
 ###  Orders API
-- Save new order (`POST /orders`)
+- Save new order (`POST api/orders`)
 - Order object contains:
   - `name`
   - `phone`
+  - `email address`
+  - `total amount paid`
   - `lessonIDs`
+  - `order date`
   - `spaces` (total or per lesson)
 - Validates that the request body includes the required data.
 
 ###  Integration With Frontend
 After checkout:
-1. Frontend sends `POST /orders` to save the order.  
-2. Frontend sends `PUT /lessons/:id` to update available lesson spaces.
+1. Frontend sends `POST api/orders` to save the order.  
+2. Frontend sends `PUT api/lessons/:id` to update available lesson spaces.
 
 ###  MongoDB Collections
-#### `lessons`
+There are 2 collections in the MongoDB Database as shown below :
+#### `Lessons`
 - `_id`
 - `topic`
 - `location`
@@ -38,7 +46,7 @@ After checkout:
 - `days`
 - `imageUrl` array
 
-#### `orders`
+#### `Orders`
 - `_id`
 - `cutomer name`
 - `phone`
@@ -62,6 +70,18 @@ After checkout:
 - config
    --> database.js       
 
-## Live Backend Deployement (Render.com)
-The backend API is deployed on Render and available at : https://express-lessons-api.onrender.com
-  
+## Local Development
+# Clone the repository
+git clone <repository-url>
+cd Express-Lessons-Api
+
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your MongoDB URI and other settings
+
+# Start development server
+npm run dev
+
