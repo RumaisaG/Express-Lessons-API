@@ -73,6 +73,7 @@ There are 2 collections in the MongoDB Database as shown below :
 ## Local Development
 ### Clone the repository
 git clone https://github.com/RumaisaG/Express-Lessons-API.git
+
 cd Express-Lessons-Api
 
 ### Install dependencies
