@@ -6,6 +6,7 @@ const uri = process.env.MONGO_URI;
 let client; 
 let db;
 
+// establish the connection to MongoDB Database
 async function connectToDatabase() {
   if (db) {
     return db; 
@@ -26,6 +27,7 @@ async function connectToDatabase() {
   }
 }
 
+// to retrieve the active database instance
 function getDb() {
   if (!db) {
     throw new Error('Database not connected.');

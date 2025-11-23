@@ -23,7 +23,11 @@ const imageMiddleware = (req, res, next) => {
     });
 };
 
+const htmlMiddleware = express.static(
+    path.join(__dirname, '../../Lessons-Apps-Vue'),
+    { fallthrough: true }
+);
 
 module.exports = {
-    imageMiddleware
+    imageMiddleware,htmlMiddleware
 };

@@ -1,6 +1,6 @@
 const express = require('express');
 const loggerMiddleware = require('./middleware/logger');
-const { imageMiddleware } = require('./middleware/staticFiles');
+const { imageMiddleware, htmlMiddleware } = require('./middleware/staticFiles');
 const { connectToDatabase } = require('./config/database');
 const apiRouter = require('./routes/api');
 const cors = require('cors');
@@ -12,12 +12,11 @@ async function startServer() {
     try {
 
         await connectToDatabase();
-
        app.use(cors({
             origin: [
                 'https://rumaisag.github.io',  
                 'http://localhost:3000',         
-                'http://127.0.0.1:3000'            
+                'http://127.0.0.1:5500'            
             ],
           
             methods: ['GET', 'POST', 'PUT'],
@@ -27,6 +26,7 @@ async function startServer() {
 
         // Logger Middleware
         app.use(loggerMiddleware);
+        app.use(htmlMiddleware);
      
         // API routes
         app.use('/api', apiRouter);

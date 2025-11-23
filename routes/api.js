@@ -3,6 +3,8 @@ const router = express.Router();
 const { ObjectId } = require('mongodb');
 const { getDb } = require('../config/database');
 
+
+// fetch all lessons from the database to display on the home page 
 router.get('/lessons', async (req, res) => {
     try {
         const db = getDb();
@@ -14,6 +16,7 @@ router.get('/lessons', async (req, res) => {
     }
 });
 
+// search lessons by topic, location, description and category
 router.get('/search', async(req,res) => {
     try {
 
@@ -43,6 +46,7 @@ router.get('/search', async(req,res) => {
     }
 }) 
 
+// update specific lesson using its id
 router.put('/lessons/:id', (req, res) => {
     const { id } = req.params;
     const updates = req.body;
@@ -72,6 +76,8 @@ router.put('/lessons/:id', (req, res) => {
     });
 });
 
+
+// creates a new order and save to the database
 router.post('/orders', (req, res) => {
     const orderData = req.body;
   
