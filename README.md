@@ -3,7 +3,7 @@
 RU Academy Backend is a Node.js/Express REST API that powers the after-school lessons booking platform. It uses native MongoDB driver for efficient database operations and provides real-time search functionality.
 
 ## Live Backend Deployement (Render.com)
-The backend API is deployed on Render and available at : https://express-lessons-api.onrender.com
+The backend API is deployed on Render.com and available at : https://express-lessons-api.onrender.com
 
 You can see the list of all lessons at https://express-lessons-api.onrender.com/api/lessons
 
@@ -36,8 +36,8 @@ After checkout:
 
 ###  MongoDB Collections
 There are 2 collections in the MongoDB Database as shown below :
-#### `Lessons`
-- `_id`
+#### `Lessons`                 
+- `_id`                        
 - `topic`
 - `location`
 - `price`
@@ -48,8 +48,8 @@ There are 2 collections in the MongoDB Database as shown below :
 - `days`
 - `imageUrl` array
 
-#### `Orders`
-- `_id`
+ #### `Orders`
+-  `_id`
 - `cutomer name`
 - `phone`
 - `email address`
@@ -63,28 +63,43 @@ There are 2 collections in the MongoDB Database as shown below :
 - MongoDB (Atlas)  
 
 ##  Project Structure
-- server.js
-- routes --> api.js
-- middleware
-   --> logger.js
-   --> staticFiles.js
-- images
-- config
-   --> database.js       
-
+```
+express-lessons-api/
+├──  config/
+│   └── database.js              # MongoDB connection manager
+│       ├── connectToDatabase()  # Establishes DB connection
+│       ├── getDb()              # Returns database instance  
+│       └── closeDatabaseConnection() # Cleanup function
+|
+├──  middleware/
+│   ├── loggerMiddleware.js      # Logs all API requests
+│   └── staticMiddleware.js      # Handles image serving & Vue app
+├──  routes/
+│   └── api.js                   # REST API endpoints
+│       ├── GET /api/lessons     # Fetch all lessons
+│       ├── GET /api/search      # Search lessons
+│       ├── PUT /api/lessons/:id # Update lesson spaces
+│       └── POST /api/orders     # Create new orders
+├──  server.js                 # Express server configuration
+├──  package.json              # Dependencies and scripts
+├──  .env.example              # Environment variables template
+├──  .gitignore                # Git ignore rules
+└──  README.md        
+```
 ## Local Development
 ### Clone the repository
-git clone https://github.com/RumaisaG/Express-Lessons-API.git
+```git clone https://github.com/RumaisaG/Express-Lessons-API.git```
 
-cd Express-Lessons-Api
+```cd Express-Lessons-Api```
 
 ### Install dependencies
-npm install
+```npm install```
 
 ### Set up environment variables
-cp .env.example .env
+```cp .env.example .env```
+
 Edit .env with your MongoDB URI and other settings
 
 ### Start development server
-npm run dev
+```npm run dev```
 
