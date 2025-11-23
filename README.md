@@ -71,17 +71,17 @@ There are 2 collections in the MongoDB Database as shown below :
    --> database.js       
 
 ## Local Development
-# Clone the repository
-git clone <repository-url>
+### Clone the repository
+git clone https://github.com/RumaisaG/Express-Lessons-API.git
 cd Express-Lessons-Api
 
-# Install dependencies
+### Install dependencies
 npm install
 
-# Set up environment variables
+### Set up environment variables
 cp .env.example .env
-# Edit .env with your MongoDB URI and other settings
+Edit .env with your MongoDB URI and other settings
 
-# Start development server
+### Start development server
 npm run dev
 
